@@ -10,19 +10,20 @@ final kTestMode = Platform.environment.containsKey('FLUTTER_TEST');
 FlavorValues get flavor => FlavorConfig.values();
 
 final kFlavorDev = FlavorValues(
-  baseUrl: kLocalhost,
+  baseUrl: kBaseUrl,
   features: () => Features.dev,
 );
 
 final kFlavorQa = FlavorValues(
-  baseUrl: kLocalhost,
+  baseUrl: kBaseUrl,
   features: () => Features.qa,
 );
 
 final kFlavorProd = FlavorValues(
-  baseUrl: kLocalhost,
+  baseUrl: kBaseUrl,
   features: () => Features.prod,
 );
 
 const kLocalhost = 'http://localhost';
 const kLocalhostAndroid = 'http://10.0.2.2';
+const kBaseUrl = 'https://www.scalablepath.com/api/';

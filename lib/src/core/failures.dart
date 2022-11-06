@@ -62,3 +62,13 @@ class ConnectionFailure extends Failure {
             message: 'Encontramos uma falha na conexão,'
                 '\nverifique sua internet e tente novamente.');
 }
+
+class ParseEntityFailure extends Failure {
+  const ParseEntityFailure(Type entity)
+      : super(
+          title: 'Falha no sistema',
+          message: 'Houve uma falha ao traduzir a mensagem do servidor, '
+              'tente novamente ou contacte o suporte.',
+          code: '100$entity',
+        );
+}
